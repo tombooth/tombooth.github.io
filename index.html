@@ -57,8 +57,16 @@
 
          }
 
+	 h2 + sub {
+            vertical-align: baseline;
+            font-style: italic;
+            margin-top: -15px;
+            margin-bottom: 35px;
+            display: block;
+         }
 
-         @media (min-width: 768px) {
+
+         @media screen and (min-width: 768px) {
             header p.date {
                 position: absolute;
                 top: 8px;
@@ -73,13 +81,30 @@
             }
          }
 
-	 h2 + sub {
-            vertical-align: baseline;
-            font-style: italic;
-            margin-top: -15px;
-            margin-bottom: 35px;
-            display: block;
+         @media print {
+             body {
+                 font-size: 12px;
+             }
+
+             section.contact {
+                 display: none;
+             }
+
+             article {
+                 max-width: 100%;
+                 padding-left: 30px;
+                 padding-right: 30px;
+             }
+
+             h2 + sub {
+                 margin-bottom: 15px;
+             }
+
+             section {
+                 margin-bottom: 30px;
+             }
          }
+
 
         </style>
 
@@ -88,7 +113,7 @@
 
         <article>
             <h1>Tom Booth</h1>
-            <section>
+            <section class="contact">
                 ✉️ <a href="mailto:hello@tombooth.co.uk">hello@tombooth.co.uk</a>
             </section>
             <section>
